@@ -1,7 +1,16 @@
 <template>
-	<p>
-		<lightning-formatted-text
-			class="slds-p-around_medium"
-			value={displayText}></lightning-formatted-text>
-	</p>
+  <lightning-layout horizontal-align="space">
+    <lightning-layout-item>
+      <lightning-formatted-text
+        class="slds-p-around_medium"
+        value={displayTextFlat}
+      ></lightning-formatted-text>
+    </lightning-layout-item>
+    <lightning-layout-item>
+      <lightning-formatted-text
+        class="slds-p-around_medium"
+        value={displayTextGetterSetter}
+      ></lightning-formatted-text
+    ></lightning-layout-item>
+  </lightning-layout>
 </template>

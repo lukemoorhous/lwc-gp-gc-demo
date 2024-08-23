@@ -1,9 +1,23 @@
-import { api, LightningElement } from 'lwc';
+import { api, LightningElement, track } from "lwc";
 
 export default class Grandchild extends LightningElement {
-    @api trackedText;
+  @api trackedTextFlat;
 
-    get displayText() {
-        return `Grandchild.trackedText = ${this.trackedText}`;
-    }
+  @track _trackedText;
+
+  @api
+  set trackedTextGetterSetter(value) {
+    this._trackedText = value;
+  }
+  get trackedTextGetterSetter() {
+    return this._trackedText;
+  }
+
+  get displayTextFlat() {
+    return `Grandchild.trackedTextFlat = ${this.trackedTextFlat}`;
+  }
+
+  get displayTextGetterSetter() {
+    return `Grandchild.trackedTextGetterSetter = ${this.trackedTextGetterSetter}`;
+  }
 }

@@ -1,18 +1,23 @@
-import { api, LightningElement, track } from 'lwc';
+import { api, LightningElement, track } from "lwc";
 
 export default class Parent extends LightningElement {
-    // @api trackedText;
+  @api trackedTextFlat;
 
-    @track _trackedText;
+  @track _trackedText;
 
-    @api set trackedText(value) {
-        this._trackedText = value;
-    };
-    get trackedText() {
-        return this._trackedText;
-    }
+  @api
+  set trackedTextGetterSetter(value) {
+    this._trackedText = value;
+  }
+  get trackedTextGetterSetter() {
+    return this._trackedText;
+  }
 
-    get displayText() {
-        return `Parent.trackedText = ${this.trackedText}`;
-    }
+  get displayTextFlat() {
+    return `Parent.trackedTextFlat = ${this.trackedTextFlat}`;
+  }
+
+  get displayTextGetterSetter() {
+    return `Parent.trackedTextGetterSetter = ${this.trackedTextGetterSetter}`;
+  }
 }

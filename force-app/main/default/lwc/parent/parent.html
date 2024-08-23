@@ -1,8 +1,20 @@
 <template>
-	<p>
-		<lightning-formatted-text
-			class="slds-p-around_medium"
-			value={displayText}></lightning-formatted-text>
-	</p>
-	<c-grandchild tracked-text={trackedText}></c-grandchild>
+  <lightning-layout horizontal-align="space">
+    <lightning-layout-item>
+      <lightning-formatted-text
+        class="slds-p-around_medium"
+        value={displayTextFlat}
+      ></lightning-formatted-text>
+    </lightning-layout-item>
+    <lightning-layout-item>
+      <lightning-formatted-text
+        class="slds-p-around_medium"
+        value={displayTextGetterSetter}
+      ></lightning-formatted-text>
+    </lightning-layout-item>
+  </lightning-layout>
+  <c-grandchild
+    tracked-text-flat={trackedTextFlat}
+    tracked-text-getter-setter={trackedTextGetterSetter}
+  ></c-grandchild>
 </template>

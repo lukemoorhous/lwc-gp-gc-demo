@@ -1,17 +1,24 @@
 <template>
-	<lightning-card title="Grandparent">
-		<div class="slds-p-around_small">
-			<lightning-input
-				placeholder={placeholderText}
-				label="trackedText"
-				name="GP Input"
-				onchange={handleInput}></lightning-input>
-			<p>
-				<lightning-formatted-text
-					class="slds-p-around_medium"
-					value={displayText}></lightning-formatted-text>
-			</p>
-			<c-parent tracked-text={trackedText}></c-parent>
-		</div>
-	</lightning-card>
+  <lightning-card title="Grandparent">
+    <div class="slds-p-around_small">
+      <lightning-input
+        placeholder={placeholderText}
+        label="trackedText"
+        name="GP Input"
+        onchange={handleInput}
+      ></lightning-input>
+      <lightning-layout horizontal-align="space">
+        <lightning-layout-item>
+          <lightning-formatted-text
+            class="slds-p-around_medium"
+            value={displayText}
+          ></lightning-formatted-text>
+        </lightning-layout-item>
+      </lightning-layout>
+      <c-parent
+        tracked-text-flat={trackedText}
+        tracked-text-getter-setter={trackedText}
+      ></c-parent>
+    </div>
+  </lightning-card>
 </template>

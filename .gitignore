@@ -1,0 +1,15 @@
+.sf/
+.sfdx/**
+.vscode/**
+package.json
+.DS_Store
+force-app/.DS_Store
+force-app/main/.DS_Store
+force-app/main/default/.DS_Store
+force-app/main/default/ProjectManagementTool-main/force-app/main/default/lwc/jsconfig.json
+force-app/main/default/staticresources/SurveyForce_SLDS/assets/icons/.DS_Store
+node_modules/
+package-lock.json
+
+# Luke's working directory ignores
+savedViewsExport.*

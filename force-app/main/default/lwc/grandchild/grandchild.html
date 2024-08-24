@@ -1,16 +1,14 @@
 <template>
-  <lightning-layout horizontal-align="space">
-    <lightning-layout-item>
-      <lightning-formatted-text
-        class="slds-p-around_medium"
-        value={displayTextFlat}
-      ></lightning-formatted-text>
-    </lightning-layout-item>
-    <lightning-layout-item>
-      <lightning-formatted-text
-        class="slds-p-around_medium"
-        value={displayTextGetterSetter}
-      ></lightning-formatted-text
-    ></lightning-layout-item>
-  </lightning-layout>
+  <lightning-input
+    class="slds-m-around_small"
+    value={trackedTextFlat}
+    label="trackedTextFlat"
+    disabled
+  ></lightning-input>
+  <lightning-input
+    class="slds-m-around_small"
+    value={trackedTextGetterSetter}
+    label="trackedTextGetterSetter"
+    disabled
+  ></lightning-input>
 </template>

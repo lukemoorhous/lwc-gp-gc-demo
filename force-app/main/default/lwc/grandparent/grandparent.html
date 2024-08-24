@@ -1,24 +1,28 @@
 <template>
-  <lightning-card title="Grandparent">
-    <div class="slds-p-around_small">
-      <lightning-input
-        placeholder={placeholderText}
-        label="trackedText"
-        name="GP Input"
-        onchange={handleInput}
-      ></lightning-input>
-      <lightning-layout horizontal-align="space">
-        <lightning-layout-item>
-          <lightning-formatted-text
-            class="slds-p-around_medium"
-            value={displayText}
-          ></lightning-formatted-text>
-        </lightning-layout-item>
-      </lightning-layout>
-      <c-parent
-        tracked-text-flat={trackedText}
-        tracked-text-getter-setter={trackedText}
-      ></c-parent>
-    </div>
-  </lightning-card>
+  <lightning-layout horizontal-align="spread" class="slds-m-bottom_large">
+    <lightning-layout-item size="4"></lightning-layout-item>
+    <lightning-layout-item size="4">
+      <lightning-card title="Grandparent" class="slds-p-horizontal_small">
+        <lightning-input
+          class="slds-m-around_small"
+          placeholder={placeholderText}
+          label="trackedText"
+          name="GP Input"
+          onchange={handleInput}
+        ></lightning-input>
+        <lightning-input
+          class="slds-m-around_small"
+          value={trackedText}
+          label="trackedText"
+          disabled
+        >
+        </lightning-input>
+      </lightning-card>
+    </lightning-layout-item>
+    <lightning-layout-item size="4"></lightning-layout-item>
+  </lightning-layout>
+  <c-parent
+    tracked-text-flat={trackedText}
+    tracked-text-getter-setter={trackedText}
+  ></c-parent>
 </template>

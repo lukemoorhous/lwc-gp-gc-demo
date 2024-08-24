@@ -12,12 +12,4 @@ export default class Grandchild extends LightningElement {
   get trackedTextGetterSetter() {
     return this._trackedText;
   }
-
-  get displayTextFlat() {
-    return `Grandchild.trackedTextFlat = ${this.trackedTextFlat}`;
-  }
-
-  get displayTextGetterSetter() {
-    return `Grandchild.trackedTextGetterSetter = ${this.trackedTextGetterSetter}`;
-  }
 }

@@ -1,20 +1,31 @@
 <template>
   <lightning-layout horizontal-align="space">
-    <lightning-layout-item>
-      <lightning-formatted-text
-        class="slds-p-around_medium"
-        value={displayTextFlat}
-      ></lightning-formatted-text>
+    <lightning-layout-item size="2"></lightning-layout-item>
+    <lightning-layout-item size="3">
+      <lightning-card title="Parent">
+        <lightning-input
+          class="slds-m-around_small"
+          value={trackedTextFlat}
+          label="trackedTextFlat"
+          disabled
+        ></lightning-input>
+        <lightning-input
+          class="slds-m-around_small"
+          value={trackedTextGetterSetter}
+          label="trackedTextGetterSetter"
+          disabled
+        ></lightning-input>
+      </lightning-card>
     </lightning-layout-item>
-    <lightning-layout-item>
-      <lightning-formatted-text
-        class="slds-p-around_medium"
-        value={displayTextGetterSetter}
-      ></lightning-formatted-text>
+	<lightning-layout-item size="2"></lightning-layout-item>
+    <lightning-layout-item size="3">
+      <lightning-card title="Grandchild">
+        <c-grandchild
+          tracked-text-flat={trackedTextFlat}
+          tracked-text-getter-setter={trackedTextGetterSetter}
+        ></c-grandchild>
+      </lightning-card>
     </lightning-layout-item>
+    <lightning-layout-item size="2"></lightning-layout-item>
   </lightning-layout>
-  <c-grandchild
-    tracked-text-flat={trackedTextFlat}
-    tracked-text-getter-setter={trackedTextGetterSetter}
-  ></c-grandchild>
 </template>

@@ -1,4 +1,4 @@
-# Grandchild - Grandparent LWC Communication
+# Grandparent to Grandchild Reactive LWC Communication Demo
 
 1. Track a property on the Grandparent
 2. Pass that property to an @api decorated property (can be a getter/setter) on the Parent (the Grandparent's child)

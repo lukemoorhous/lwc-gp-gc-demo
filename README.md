@@ -20,4 +20,4 @@ To deploy this [Grandparent](force-app/main/default/lwc/grandparent) to [Grandch
 
 ### Included Tabs
 
-- [`Grandparent Grandchild Demo`](force-app/main/default/tabs/Grandparent_Grandchild_Demo.tab-meta.xml)
+- [Grandparent Grandchild Demo](force-app/main/default/tabs/Grandparent_Grandchild_Demo.tab-meta.xml)

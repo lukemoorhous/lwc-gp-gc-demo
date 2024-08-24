@@ -6,7 +6,6 @@
 
 # Deploy the Demo
 
-To deploy this Grandparent to Grandchild reactive component demo to your org, use the provided manifest. This repo contains the LWCs and the Tab in a completely self-contained package. After deploying, open the tab named `Grandparent Grandchild Demo` by searching for it in the App Menu in Salesforce.
+To deploy this Grandparent to Grandchild reactive component demo to your org, use the provided [manifest](/manifest/package.xml). This repo contains the LWCs and the Tab in a completely self-contained package. After deploying, open the tab named `Grandparent Grandchild Demo` by searching for it in the App Menu in Salesforce.
 
-Manifest File
 [`manifest/package.xml`](/manifest/package.xml)
